@@ -28,9 +28,17 @@
 
             while ($obj = $res->fetch_object()) {
                 $json[] = array(
+                    'id_usuario' => $obj->id_usuario,
+                    'id_perfil' => $obj->id_perfil,
                     'nombres' => $obj->nombres,
                     'ap_paterno' => $obj->ap_paterno,
+                    'email' => $obj->email,
+                    'id_estado' => $obj->id_estado
                 );;
+
+                session_start();
+                $_SESSION['user'] = $obj;
+                
             }
 
             $userExist = "false";

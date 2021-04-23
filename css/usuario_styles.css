@@ -1,0 +1,106 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #fafafafa;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+#header_style {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+@media (max-width: 768px) { 
+    #header_style {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .usuario_text {
+        display: none;
+    }
+
+    .title_text {
+        font-size: 14px;
+        color: #ffff;
+        font-weight: 300;
+    }
+ }
+
+#nav_style {
+    background-color: #0f384e;
+    height: 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 4px 4px 4px 4px #ccc;
+}
+
+.mantenedor {
+    height: 90%;
+    width: 100%;
+    padding-top: 30px;
+}
+
+.mantenedor_header {
+    background-color: cyan;
+    height: 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.mantenedor_options{
+    height: 10%;
+}
+
+.mantenedor_table{
+    
+
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+}
+
+.form_label_errors{
+    display: flex;
+}
+
+.table_styles {
+    width: 100%;
+
+}
+
+.icon {
+    color: #ffff;
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+.title_text {
+    font-size: 20px;
+    color: #ffff;
+    font-weight: 700;
+}
+
+.usuario_text {
+    font-size: 18px;
+    color: #ffff;
+}
+
+.errormen{
+    font-size: 12px;
+}
+

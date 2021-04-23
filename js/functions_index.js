@@ -22,7 +22,7 @@ document.getElementById("iniciar_sesion").addEventListener("click", function(eve
                 //let users = JSON.parse(response);
                 console.log("RESPONSE => ", response);
                 if(response === "true"){
-                    location.href = "http://localhost/Test_conocimientos/Usuario/Index";
+                    location.href = "http://localhost/Test_conocimientos/Usuario/Index?stauts=1";
                 }else{
                     console.log("NO MATCH")
                     $('#alert_error').slideDown(500);
@@ -39,7 +39,6 @@ var username = "";
 var password = "";
 
 document.getElementById("txt_usuario").addEventListener("keyup", function(event){
-    console.log("KEY DOWN!!!!!")
     var value_without_space = $.trim($("#txt_usuario").val());
     username = value_without_space;
     
@@ -47,7 +46,6 @@ document.getElementById("txt_usuario").addEventListener("keyup", function(event)
     console.log("usuario => "+username);
 
     if(username.length > 3  && password.length > 3 && username.trim() !== "" && password.trim() !== ""){
-        console.log("usuario invalido");
         $("#iniciar_sesion").prop('disabled', false)
     }else{
         $("#iniciar_sesion").prop('disabled', true)
@@ -67,8 +65,6 @@ document.getElementById("txt_password").addEventListener("keyup", function(event
     password = value_without_space;
 
     password = $("#txt_password").val();
-    
-    console.log("password => "+password);
 
     if(username.length > 3  && password.length > 3){
         console.log("usuario invalido");

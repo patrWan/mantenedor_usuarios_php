@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     
@@ -15,6 +15,12 @@
 </head>
 
 <body>
+<?php
+    session_start();
+    if(isset($_SESSION['user'])){
+        header("Location: http://localhost/Test_conocimientos/Usuario/Index");
+    }
+?>
     <div class="container contenedor_general">
         <div class="contenedor_login">
 
@@ -34,7 +40,7 @@
                             <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
                         </div>
                         <input type="text" class="form-control" id="txt_usuario" aria-describedby="emailHelp" placeholder="Usuario" maxlength="15" required>
-                        <span id="label_error_usuario" class="fs-7 font-weight-bold text-primary" style="display:none;">usuario requerido</span>
+                        <span id="label_error_usuario" class=" font-weight-bold invalid-feedback" style="display:none; font-size : 13px">usuario requerido</span>
                     </div>
 
                     <div class="input-group mb-2 mr-sm-2">
@@ -42,7 +48,7 @@
                             <div class="input-group-text"><i class="bi bi-unlock-fill"></i></div>
                         </div>
                         <input type="password" class="form-control" id="txt_password" maxlength="10" placeholder="Contraseña" required>
-                        <span id="label_error_password" class="fs-7 font-weight-bold text-primary" style="display:none;">contraseña requerida</span>
+                        <span id="label_error_password" class=" font-weight-bold invalid-feedback" style="display:none; font-size : 13px">contraseña requerida</span>
                     </div>
                     <div class="d-grid gap-2">
                         <button type="submit" class="btn btn-primary btn-block" id="iniciar_sesion" disabled="true">INICIAR SESIÓN</button>

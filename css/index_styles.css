@@ -74,11 +74,13 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     font-size: 28px;
+    
 }
 
-@media (max-width: 770px) {
+@media (max-width: 768px) {
     .contenedor_formulario {
       width : 100%;
+      background-color: aqua;
     }
 
     .contenedor_login{
@@ -87,5 +89,9 @@ body{
 
     #title_app {
         font-size: 18px;
+    }
+
+    #label_error_password {
+        font-size: 10px;
     }
 }
