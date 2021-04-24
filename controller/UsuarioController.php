@@ -25,6 +25,14 @@
             $this->model->add_usuario();
         }
 
+        public function edit_usuario(){
+            $this->model->edit_usuario();
+        }
+
+        public function delete_usuario(){
+            $this->model->delete_usuario();
+        }
+
         
     }
 ?>

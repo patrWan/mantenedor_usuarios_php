@@ -22,7 +22,7 @@ document.getElementById("iniciar_sesion").addEventListener("click", function(eve
                 //let users = JSON.parse(response);
                 console.log("RESPONSE => ", response);
                 if(response === "true"){
-                    location.href = "http://localhost/Test_conocimientos/Usuario/Index?stauts=1";
+                    location.href = "http://localhost/Test_conocimientos/Usuario/Index";
                 }else{
                     console.log("NO MATCH")
                     $('#alert_error').slideDown(500);
